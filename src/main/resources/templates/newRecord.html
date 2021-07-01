@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New record</title>
+</head>
+<body>
+<div class="container" align="center">
+<p><b>Add New Record</b></p>
+<form th:object="${record}" action="newRecord" method="post">
+    <table>
+        <form name="id" id="id"/>
+        <form name="user_id" id="user_id"/>
+        <tr>
+            <td>Title</td>
+            <td><input name="title" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input name="description" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>
+                <select name="status" id="status">
+                    <option value="Planned">Planned</option>
+                    <option value="In Progress">InProgress</option>
+                    <option value="Done">Done</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create" /></td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+</html>

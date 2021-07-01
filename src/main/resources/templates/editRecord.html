@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<div class="container" align="center">
+<p><b>Edit Record</b></p>
+<form th:object="${record}" action="#" th:action="@{/editRecord}" method="post">
+  <table>
+    <form name="user_id" id="user_id"/>
+    <tr>
+      <td>Id</td>
+      <td><input readonly name="id" type="number" th:field="*{id}"/></td>
+    </tr>
+    <tr>
+      <td>Title</td>
+      <td><input name="title" type="text" th:field="*{title}"/></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><input name="description" type="text" th:field="*{description}"/></td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>
+        <select name="status" id="status">
+          <option value="Planned">Planned</option>
+          <option value="In Progress">InProgress</option>
+          <option value="Done">Done</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input type="submit" value="Edit" /></td>
+    </tr>
+  </table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+use todolist;
+
+select * from users;
+select * from records;
+
+drop table records;
+
+create table if not exists users(
+	user_id       INT PRIMARY KEY AUTO_INCREMENT,
+    login    VARCHAR(40) UNIQUE,
+    email    VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);
+
+create table if not exists records(
+	record_id int primary key auto_increment,
+    title varchar(100),
+    description varchar(1000),
+    status enum('Planned', 'In Progress', 'Done'),
+    user_id int,
+	FOREIGN KEY (user_id) references users (user_id) ON DELETE CASCADE
+);
