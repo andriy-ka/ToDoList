@@ -1,9 +1,8 @@
-package andriiK.ToDoList.model;
+package andriy.todolist.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.Collection;
 import java.util.HashSet;
 

@@ -1,6 +1,6 @@
-package andriiK.ToDoList.exeption;
+package andriy.todolist.exeption;
 
-public class UserAlreadyExistException extends Exception{
+public class UserAlreadyExistException extends Exception {
     public UserAlreadyExistException() {
         super();
     }

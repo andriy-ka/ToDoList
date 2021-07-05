@@ -1,19 +1,19 @@
-package andriiK.ToDoList.service;
+package andriy.todolist.service;
 
-import andriiK.ToDoList.model.Record;
-import andriiK.ToDoList.model.User;
-import andriiK.ToDoList.repository.RecordRepository;
+import andriy.todolist.model.Record;
+import andriy.todolist.model.User;
+import andriy.todolist.repository.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class RecordService{
-    private RecordRepository repository;
+public class RecordService {
+    private final RecordRepository repository;
 
     @Autowired
-    RecordService (RecordRepository repository){
+    RecordService(RecordRepository repository) {
         this.repository = repository;
     }
 
@@ -21,15 +21,15 @@ public class RecordService{
         return repository.findAllRecordsByUser(user);
     }
 
-    public void saveRecord(Record record){
+    public void saveRecord(Record record) {
         repository.save(record);
     }
 
-    public void deleteRecordById(int id){
+    public void deleteRecordById(int id) {
         repository.deleteRecordById(id);
     }
 
-    public Record findRecordById(int id){
+    public Record findRecordById(int id) {
         return repository.findRecordById(id);
     }
 }

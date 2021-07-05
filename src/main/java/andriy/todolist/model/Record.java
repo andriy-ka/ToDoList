@@ -1,4 +1,4 @@
-package andriiK.ToDoList.model;
+package andriy.todolist.model;
 
 import lombok.Data;
 

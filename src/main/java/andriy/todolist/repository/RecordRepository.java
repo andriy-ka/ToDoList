@@ -1,7 +1,7 @@
-package andriiK.ToDoList.repository;
+package andriy.todolist.repository;
 
-import andriiK.ToDoList.model.Record;
-import andriiK.ToDoList.model.User;
+import andriy.todolist.model.Record;
+import andriy.todolist.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +11,7 @@ import java.util.List;
 @Repository
 public interface RecordRepository extends JpaRepository<Record, Integer> {
     List<Record> findAllRecordsByUser(User user);
+
     @Transactional
     void deleteRecordById(int id);
 

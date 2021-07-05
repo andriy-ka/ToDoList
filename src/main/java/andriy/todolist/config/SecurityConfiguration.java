@@ -1,4 +1,4 @@
-package andriiK.ToDoList.config;
+package andriy.todolist.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -12,8 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @EnableWebSecurity
 public class SecurityConfiguration
-        extends WebSecurityConfigurerAdapter
-{
+        extends WebSecurityConfigurerAdapter {
 
     @Autowired
     UserDetailsService userDetailsService;
@@ -32,7 +31,8 @@ public class SecurityConfiguration
                 .antMatchers("/login").not().authenticated()
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/login")
-                .and().formLogin().defaultSuccessUrl("/home");
+                .and()
+                .formLogin().defaultSuccessUrl("/home");
     }
 
     @Bean
