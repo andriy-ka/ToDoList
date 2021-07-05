@@ -1,0 +1,6 @@
+2021/07/05 14:54:37Invocation of method UserDetails andriy.todolist.service.MyUserDetailsService.loadUserByUsername(String)
+2021/07/05 14:54:37Invocation of method User andriy.todolist.service.UserService.findUserById(int)
+2021/07/05 14:54:37Invocation of method List andriy.todolist.service.RecordService.findAllRecordsByUser(User)
+2021/07/05 14:54:37Invocation of method void andriy.todolist.service.RecordService.deleteRecordById(int)
+2021/07/05 14:54:37Invocation of method User andriy.todolist.service.UserService.findUserById(int)
+2021/07/05 14:54:37Invocation of method List andriy.todolist.service.RecordService.findAllRecordsByUser(User)
