@@ -1,0 +1,7 @@
+2021-07-07 17:09:49,399 INFO o.s.b.StartupInfoLogger [main] Starting ToDoListApplication using Java 1.8.0_291 on EPUALVIW09B1 with PID 14996 (C:\Users\Andrii_Kachur\IdeaProjects\ToDoList\target\classes started by Andrii_Kachur in C:\Users\Andrii_Kachur\IdeaProjects\ToDoList)
+2021-07-07 17:09:49,404 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-07-07 17:09:49,405 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-07-07 17:09:54,284 INFO o.s.b.StartupInfoLogger [main] Started ToDoListApplication in 5.206 seconds (JVM running for 6.169)
+2021-07-07 17:10:09,397 INFO a.t.a.AspectLog [http-nio-8080-exec-3] UserDetails andriy.todolist.service.MyUserDetailsService.loadUserByUsername(String)
+2021-07-07 17:10:09,612 INFO a.t.a.AspectLog [http-nio-8080-exec-4] User andriy.todolist.service.UserService.findUserById(int)
+2021-07-07 17:10:09,621 INFO a.t.a.AspectLog [http-nio-8080-exec-4] List andriy.todolist.service.RecordService.findAllRecordsByUser(User)
