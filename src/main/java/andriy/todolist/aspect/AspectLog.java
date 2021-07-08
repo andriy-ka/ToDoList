@@ -20,7 +20,7 @@ public class AspectLog {
 
     @Before("execution(* andriy.todolist.service.*.*(..))")
     public void beforeServiceMethodInvocation(JoinPoint jp) {
-        logger.debug(dtf.format(now) + " Invocation of method " + jp.getSignature());
+        logger.debug(" Invocation of method " + jp.getSignature());
 //        System.out.println(dtf.format(now) + " Invocation of method " + jp.getSignature());
     }
 
