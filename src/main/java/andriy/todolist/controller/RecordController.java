@@ -1,5 +1,6 @@
 package andriy.todolist.controller;
 
+import andriy.todolist.exeption.UserAlreadyExistException;
 import andriy.todolist.model.MyUserDetails;
 import andriy.todolist.model.Record;
 import andriy.todolist.service.RecordService;
@@ -25,7 +26,7 @@ public class RecordController {
     }
 
     @GetMapping("/home")
-    public String greeting(@RequestParam(required = false) Integer id, Model model) {
+    public String greeting(@RequestParam(required = false) Integer id, Model model) throws UserAlreadyExistException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         MyUserDetails userDetails = (MyUserDetails) authentication.getPrincipal();
         List<Record> records = recordService.findAllRecordsByUser(userService.findUserById(userDetails.getId()));

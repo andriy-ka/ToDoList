@@ -1,6 +1,5 @@
 package andriy.todolist.controller;
 
-import andriy.todolist.exeption.UserAlreadyExistException;
 import andriy.todolist.model.UserData;
 import andriy.todolist.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,17 +25,7 @@ public class RegistrationController {
 
     @PostMapping("/register")
     public String userRegistration(final @Valid UserData userData, final BindingResult bindingResult, final Model model) {
-        if (bindingResult.hasErrors()) {
-            model.addAttribute("registrationForm", userData);
-            return "registration";
-        }
-        try {
-            userService.register(userData);
-        } catch (UserAlreadyExistException e) {
-            bindingResult.rejectValue("login", "userData.login", "An account already exists for this login.");
-            model.addAttribute("registrationForm", userData);
-            return "registration";
-        }
+        userService.register(userData, bindingResult);
         return "redirect:/home";
     }
 }

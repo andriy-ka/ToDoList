@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+    <p><b>Ooops error</b></p>
+    <p th:text=${error.message}> ${error.massage} </p>
+    <p th:text=${error.errorType}> ${error.errorType} </p>
+
+    <span th:if="${action == 'register'}"><a href="/register">Back to register</a></span>
+    <span th:if="${action == 'home'}"><a href="/home">Home</a></span>
+
+    <p th:text=${error.timeStamp}> ${error.timeStamp} </p>
+
+</body>
+</html>
