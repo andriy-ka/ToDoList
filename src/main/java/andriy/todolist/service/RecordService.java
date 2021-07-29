@@ -13,7 +13,7 @@ public class RecordService {
     private final RecordRepository repository;
 
     @Autowired
-    RecordService(RecordRepository repository) {
+    public RecordService(RecordRepository repository) {
         this.repository = repository;
     }
 

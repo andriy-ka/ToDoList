@@ -1,12 +1,18 @@
 package andriy.todolist.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "records")
+@AllArgsConstructor
+@RequiredArgsConstructor
+@EqualsAndHashCode
 public class Record {
 
     @Id
