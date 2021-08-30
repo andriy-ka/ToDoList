@@ -1,6 +1,6 @@
 package andriy.todolist.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -8,6 +8,10 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "users")
+@AllArgsConstructor
+@RequiredArgsConstructor
+@EqualsAndHashCode
+@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
